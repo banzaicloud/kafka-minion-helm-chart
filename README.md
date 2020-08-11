@@ -48,6 +48,7 @@ helm install --name=kafka-minion kafka-minion/kafka-minion
 | `serviceMonitor.scrapeTimeout` | Scrape timeout for prometheus operator | `10s` |
 | `serviceMonitor.releaseLabel` | Release label being used for prometheus operator selector | `prometheus-operator` |
 | `serviceMonitor.additionalLabels` | Additional labels to add to the ServiceMonitor | (none) |
+| `serviceMonitor.relabelings` | RelabelConfigs to add to the ServiceMonitor | (none) |
 | `podAnnotations` | Pod annotations | `{}` |
 | `priorityClassName` | Priority Class to be used by the pod | `""` |
 | `podSecurityPolicy.enabled` | Enable/disable PodSecurityPolicy and associated Role/Rolebinding creation | `false` |
