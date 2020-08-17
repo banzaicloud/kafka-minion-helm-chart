@@ -27,7 +27,7 @@ spec:
     scrapeTimeout: {{ .Values.serviceMonitor.scrapeTimeout }}
     {{- if .Values.serviceMonitor.relabelings }}
     relabelings:
-    {{ toYaml .Values.serviceMonitor.relabelings | indent 4 }}
+    {{ toYaml .Values.serviceMonitor.relabelings | indent 6 }}
     {{- end }}
   selector:
     matchLabels:
