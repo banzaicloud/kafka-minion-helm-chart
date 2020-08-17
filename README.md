@@ -50,6 +50,7 @@ helm install --name=kafka-minion kafka-minion/kafka-minion
 | `serviceMonitor.additionalLabels` | Additional labels to add to the ServiceMonitor | (none) |
 | `serviceMonitor.relabelings` | RelabelConfigs to add to the ServiceMonitor | (none) |
 | `podAnnotations` | Pod annotations | `{}` |
+| `podLabels` | Pod labels | `{}` |
 | `priorityClassName` | Priority Class to be used by the pod | `""` |
 | `podSecurityPolicy.enabled` | Enable/disable PodSecurityPolicy and associated Role/Rolebinding creation | `false` |
 | `serviceAccount.create` | Create a ServiceAccount for the pod | `false` |
