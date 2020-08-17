@@ -12,6 +12,8 @@ image:
 nameOverride: ""
 fullnameOverride: ""
 
+podLabels: {}
+
 service:
   type: ClusterIP
   port: 8080
@@ -120,7 +122,13 @@ serviceMonitor:
   # If this is defined, the release label of the service monitor will match kube-eagle's one
   # additionalLabels:
   # RelabelConfigs to add to the ServiceMonitor.
-  # relabelings:
+  relabelings:
+  - sourceLabels: [__meta_kubernetes_pod_label_kafka_cr]
+    separator: ;
+    regex: (.*)
+    targetLabel: kafka_cr
+    replacement: $1
+    action: replace
 
 # Do not create a service account by default
 # Name allows using a service account not handled by the chart
