@@ -123,6 +123,7 @@ serviceMonitor:
   # additionalLabels:
   # RelabelConfigs to add to the ServiceMonitor.
   # relabelings:
+  # honorLabels:
 
 # Do not create a service account by default
 # Name allows using a service account not handled by the chart
