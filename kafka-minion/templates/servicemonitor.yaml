@@ -29,6 +29,9 @@ spec:
     relabelings:
     {{ toYaml .Values.serviceMonitor.relabelings | indent 6 }}
     {{- end }}
+    {{- if .Values.serviceMonitor.honorLabels }}
+    honorLabels: {{ .Values.serviceMonitor.honorLabels }}
+    {{- end }}
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ template "kafka-minion.name" . }}
